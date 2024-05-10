@@ -29,7 +29,6 @@ public class SimpleYandexTest {
         $$("#search-result > li").shouldHave(sizeGreaterThanOrEqual(8));
     }
 
-
     @ValueSource(strings = {
             "Selenide", "Allure"
     })
@@ -52,11 +51,5 @@ public class SimpleYandexTest {
         $("#text").setValue(testData);
         $("button[type='submit']").click();
         $$("#search-result > li").first().shouldHave(Condition.text(expectedText));
-    }
-
-    @Test
-    @DisplayName("Поиск по картинке")
-    void yaPhotoSearch() {
-        $("").click();
     }
 }
